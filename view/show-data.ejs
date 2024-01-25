@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Submitted Data</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Submitted Data</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <td><%= data.name %></td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td><%= data.password %></td>
+    </tr>
+    <tr>
+      <th>Subjects</th>
+      <td>
+        <% if (data.subjects.algorithms) { %>
+          Algorithms<br>
+        <% } %>
+        <% if (data.subjects.oop) { %>
+          OOP<br>
+        <% } %>
+        <% if (data.subjects.dataStructures) { %>
+          Data Structures<br>
+        <% } %>
+      </td>
+    </tr>
+    <tr>
+      <th>Credit Card</th>
+      <td><%= data.creditCard %></td>
+    </tr>
+    <tr>
+      <th>City</th>
+      <td><%= data.city %></td>
+    </tr>
+    <tr>
+      <th>Favorite Languages</th>
+      <td>
+        <% data.favoriteLanguages.forEach(function(language) { %>
+          <%= language %><br>
+        <% }); %>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

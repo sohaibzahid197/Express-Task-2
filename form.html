@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with all controls</title>
+  <style>
+    label {
+      display: inline-block;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="/form-handler" method="post" enctype="multipart/form-data">
+    <h2>Student Registration Form</h2>
+
+    <!-- Text Input -->
+    <label>Name</label>
+    <input maxlength="8" name="name" size="20" type="text">
+
+    <!-- Password Input -->
+    <label>Password</label>
+    <input name="password" size="20" type="password">
+
+    <!-- Checkboxes -->
+    <label>Subjects</label>
+    <input name="Algorithms" type="checkbox"> Algorithms
+    <input name="OOP" type="checkbox"> OOP
+    <input checked="checked" name="DataStructures" type="checkbox"> Data Structures
+
+    <!-- Radio buttons -->
+    <label>Credit Card</label>
+    <input checked="checked" name="credit_card" type="radio" value="Visa"> Visa
+    <input name="credit_card" type="radio" value="Master Card"> Master Card
+    <input name="credit_card" type="radio" value="American Express"> American Express
+
+    <!-- Using Option Lists - Select single value -->
+    <label>City</label>
+    <select name="city">
+      <option selected="selected" value="Lahore">Lahore</option>
+      <option value="Karachi">Karachi</option>
+      <option value="Islamabad">Islamabad</option>
+    </select>
+
+    <!-- Selecting multiple elements in option lists -->
+    <label>Favorite Languages</label>
+    <select multiple="multiple" name="languages[]" size="3">
+      <option>Java</option>
+      <option>PHP</option>
+      <option>Ruby</option>
+      <option>C</option>
+      <option>C#</option>
+    </select>
+
+    <!-- File Upload -->
+    <!-- <label>Upload File</label>
+    <input type="file" name="file">
+
+    <input type="submit"> -->
+  </form>
+</body>
+
+</html>
